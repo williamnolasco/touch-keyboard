@@ -14,19 +14,31 @@ html{
 body{
 	font-family: 'Lato-Light';
 }
-.title{
+.touch-general{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+.touch-general .title{
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
 	width: 90%;
-	margin: 30px auto;
+	margin-bottom: 20px;
 }
-.title p{
+.touch-general .title p{
 	margin-right: 25px;
 	font-size: 1.5rem;
 }
-.title input{
+.touch-general .title input{
 	outline: 0;
 	width: 320px;
 	height: 45px;
@@ -37,44 +49,62 @@ body{
 	font-family: 'Lato-Light';
 	font-size: 1.3rem;
 }
-.keyboard-container{
+.touch-general .keyboard-container{
 	width: 800px;
 	height: auto;
 	background-color: #2a3443;
 	border-radius: 1rem;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translateX(-50%) translateY(-50%);
 	padding: 30px 40px;
 }
-.keyboard-container .key-top, .keyboard-container .key-bottom, .keyboard-container .key{
+.touch-general .keyboard-container .key-top, .touch-general .keyboard-container .key-bottom, .touch-general .keyboard-container .key{
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
 }
-.keyboard-container .key{
+.keyboard-container .special-key{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	width: calc(10% - 6px);
+	height: 60px;
+	background-color: #2e3949;
+	margin: 3px;
+}
+.keyboard-container .special-key p, .keyboard-container .special-key span{
+	color: #9bfdff;
+	font-size: 2rem;
+	font-weight: bold;
+}
+.touch-general .keyboard-container .key{
 	width: calc(10% - 6px);
 	height: 60px;
 	background-color: #2e3949;
 	margin: 3px;
 	cursor: pointer;
 }
-.keyboard-container .key p, .keyboard-container .key span{
+.touch-general .keyboard-container .key p, .touch-general.keyboard-container .key span{
+	width: 100%;
+	height: 100%;
+	line-height: 60px;
+	text-align: center;
 	color: #9bfdff;
 	font-size: 2rem;
 	font-weight: bold;
 }
-.keyboard-container .key span{
+.touch-general .keyboard-container .key span{
 	display: flex;
 }
-.keyboard-container .key-bottom .special-key{
+.touch-general .keyboard-container .key-bottom .special-key{
 	width: calc(15% - 6px);
 }
-.keyboard-container .key-bottom .key:nth-last-child(2){
+.keyboard-container .key-bottom .special-key:nth-last-child(3){
+	width: calc(10% - 6px);
+}
+.keyboard-container .key-bottom .special-key:nth-last-child(2){
 	width: calc(35% - 6px);
 }
-.keyboard-container .key-bottom .key:nth-last-child(1){
+.keyboard-container .key-bottom .special-key:nth-last-child(1){
 	width: calc(25% - 6px);
 }
