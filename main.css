@@ -1,0 +1,80 @@
+@font-face{
+	font-family: 'Lato-Light';
+	src: url('./Lato-Light.ttf');
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html{
+	font-size: 14px;
+}
+body{
+	font-family: 'Lato-Light';
+}
+.title{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	width: 90%;
+	margin: 30px auto;
+}
+.title p{
+	margin-right: 25px;
+	font-size: 1.5rem;
+}
+.title input{
+	outline: 0;
+	width: 320px;
+	height: 45px;
+	line-height: 45px;
+	border: 1px solid #ddd;
+	border-radius: 0.5rem;
+	padding: 0 15px;
+	font-family: 'Lato-Light';
+	font-size: 1.3rem;
+}
+.keyboard-container{
+	width: 800px;
+	height: auto;
+	background-color: #2a3443;
+	border-radius: 1rem;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	padding: 30px 40px;
+}
+.keyboard-container .key-top, .keyboard-container .key-bottom, .keyboard-container .key{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+}
+.keyboard-container .key{
+	width: calc(10% - 6px);
+	height: 60px;
+	background-color: #2e3949;
+	margin: 3px;
+	cursor: pointer;
+}
+.keyboard-container .key p, .keyboard-container .key span{
+	color: #9bfdff;
+	font-size: 2rem;
+	font-weight: bold;
+}
+.keyboard-container .key span{
+	display: flex;
+}
+.keyboard-container .key-bottom .special-key{
+	width: calc(15% - 6px);
+}
+.keyboard-container .key-bottom .key:nth-last-child(2){
+	width: calc(35% - 6px);
+}
+.keyboard-container .key-bottom .key:nth-last-child(1){
+	width: calc(25% - 6px);
+}
